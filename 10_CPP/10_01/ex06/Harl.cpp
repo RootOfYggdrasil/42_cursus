@@ -42,13 +42,13 @@ void Harl::complain(std::string level) {
 		{
 			case DEBUG:
 				(this->debug)();
-			case ERROR:
-				(this->error)();
 			case INFO:
-				(this->info)();
+				(this->info)();		
 			case WARNING:
-			{
 				(this->warning)();
+			case ERROR:
+			{
+				(this->error)();
 				break;
 			}
 			default:

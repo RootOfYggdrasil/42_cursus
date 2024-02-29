@@ -6,7 +6,7 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/02/09 16:47:44 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/02/25 18:01:28 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RM	= rm -rf
 
 #			PATH & SOURCES	#
 SRC	= 	main	\
-		zombieHorde	\
+		ZombieHorde	\
 		Zombie
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
