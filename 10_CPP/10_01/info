@@ -1,0 +1,7 @@
+Cosa abbiamo imparato:
+
+-Allocazione e creazione di una classe nello stack e nell Heap
+	Stack: grandezza limitata e massima size fixed
+	Heap: dinamico puoi allocare e disalocare memoria a piacere
+How long do your objects live in relation to your invocations? Is the number fixed or flexible? If your object lifetimes are unpredictable in either length (not sure how long beyond the end of the call they need to last) or number (not sure how many objects this call will manipulate), you need to use dynamic allocation for your logic to be correct.
+Generally different kinds of memory are performance equivalent at access time. What differentiates them is cache behavior. Stack memory by design immediately reuses recently freed memory (pretty good). Because cache loading is done at a large granularity, touching a local variable can pull nearby stack bytes into cache as well. General purpose allocators sometimes reuse recently freed memory (if the new allocation fits), so the memory you allocate might still be hot, or at least warm. Other times, it's not possible, and you can get a new region of memory. This memory will be cache cold on first access, but then it's probably fine.

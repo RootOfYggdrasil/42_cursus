@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/01 16:04:59 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/02 15:12:47 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = HumanAttack
+NAME = Fixed
 
 #			FLAGS			#
 
@@ -24,10 +24,8 @@ AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
-SRC	= 	main \
-		HumanA \
-		HumanB \
-		Weapon
+SRC	= 	main	\
+		Fixed
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)
@@ -61,3 +59,5 @@ fclean:	clean
 		@echo "$(G)$(NAME) full cleaned!$(DEF_COLOR)"
 
 re: fclean all
+
+.PHONY: all clean fclean re

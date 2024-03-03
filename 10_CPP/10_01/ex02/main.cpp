@@ -12,7 +12,7 @@ int	main(void)
 	std::cout << "String: " << brain << std::endl;
 	std::cout << "Pointer: " << ptr << std::endl;
 	std::cout << "Reference: " << ref << "\n" << std::endl;
-	ref = "No more Brain REF CHANGED";
+	ref = "more Brain REF CHANGED";
 	std::cout << "String: " << brain << std::endl;
 	std::cout << "Pointer: " << ptr << std::endl;
 	std::cout << "Reference: " << ref << "\n" << std::endl;

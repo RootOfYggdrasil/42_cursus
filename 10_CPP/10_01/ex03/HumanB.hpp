@@ -5,19 +5,18 @@
 #include <string>
 #include "Weapon.hpp"
 
-class HumanB {
+class HumanB
+{
+    private:
+        std::string _name;
+        Weapon* _weaponPtr;
 
-public:
-	HumanB(void);
-	HumanB(std::string name);
-	~HumanB(void);
-	void setName(std::string name);
-	const std::string &getName(void) const;
-	void attack(void);
-	void setWeapon(Weapon &weapon);
-private:
-	std::string _name;
-	Weapon *_weapon;
+    public:
+        HumanB(std::string name);
+        ~HumanB();
+        void setWeapon(Weapon& weapon);
+        void attack() const;
 };
+
 
 #endif
