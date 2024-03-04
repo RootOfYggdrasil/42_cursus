@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/02 16:41:30 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/04 11:50:51 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Fixed
+NAME = bsp
 
 #			FLAGS			#
 
@@ -25,7 +25,9 @@ RM	= rm -rf
 
 #			PATH & SOURCES	#
 SRC	= 	main	\
-		Fixed
+		Fixed	\
+		Point	\
+		bsp
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)

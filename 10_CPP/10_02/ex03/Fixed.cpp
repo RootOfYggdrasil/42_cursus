@@ -5,28 +5,28 @@
 #pragma region Constructors and destructor
 Fixed::Fixed(): _value(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &fixed)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	*this = fixed;
 }
 
 Fixed::Fixed(const int value) : _value(value << this->_fractionalBits)
 {
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float value) : _value(roundf(value * (1 << this->_fractionalBits)))
 {
-	std::cout << "Float constructor called" << std::endl;
+	//std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 #pragma endregion
 
@@ -34,7 +34,7 @@ Fixed::~Fixed()
 
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
-	std::cout << "Copy Assign operator called" << std::endl;
+	//std::cout << "Copy Assign operator called" << std::endl;
 	if (this != &fixed)
 		(this->_value) = fixed.getRawBits();
 	return *this;
@@ -159,13 +159,13 @@ int Fixed::getValue(void) const {return (this->_value);}
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	//std::cout << "getRawBits member function called" << std::endl;
 	return (this->_value);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-	std::cout << "setRawBits member function called" << std::endl;
+	//std::cout << "setRawBits member function called" << std::endl;
 	(this->_value) = raw;
 }
 

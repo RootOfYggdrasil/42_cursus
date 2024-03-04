@@ -17,8 +17,12 @@ public:
 	~Point();
 	Point &operator=(const Point &point);
 	#pragma endregion
+	Point(const float x,const float y);
+	Point(const Fixed x,const Fixed y);
 	Fixed getX() const;
 	Fixed getY() const;
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
