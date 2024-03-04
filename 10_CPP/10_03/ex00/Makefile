@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/02 15:12:47 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/04 17:12:42 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Fixed
+NAME = ClapTrap
 
 #			FLAGS			#
 
@@ -25,7 +25,7 @@ RM	= rm -rf
 
 #			PATH & SOURCES	#
 SRC	= 	main	\
-		Fixed
+		ClapTrap
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)
