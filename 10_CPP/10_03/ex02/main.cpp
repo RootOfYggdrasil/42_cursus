@@ -1,13 +1,13 @@
 
-#include	"ScavTrap.hpp"
+#include	"FragTrap.hpp"
 
 int		main(void)
 {
-	ScavTrap	robot("GINO");
-	ScavTrap	robot2("Pepperiello");
-	ScavTrap	robot3();
+	FragTrap	robot("GINETTO");
+	FragTrap	robot2("Mario");
+	FragTrap	robot3();
 
-	for (size_t i = 0; i < 12; i++)
+	for (size_t i = 0; i < 105; i++)
 		robot.attack("Pippo Duro");
 	
 	robot.takeDamage(9);

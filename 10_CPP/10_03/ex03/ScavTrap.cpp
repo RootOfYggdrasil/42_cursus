@@ -3,7 +3,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	std::cout << " ScavTrap default  IS ALIVEEEEE" << std::endl;
+	std::cout << "ScavTrap default  IS ALIVEEEEE" << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
