@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/22 12:56:39 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/22 14:36:52 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = Animal
+NAME = Materia
 
 #			FLAGS			#
 
@@ -24,13 +24,12 @@ AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
-SRC	= 	Animal	\
-		Cat		\
-		Dog		\
-		WrongAnimal	\
-		WrongCat	\
-		main	\
-		Brain
+SRC	= 	main	\
+		AMateria	\
+		Character	\
+		Cure	\
+		Ice	\
+		MateriaSource	\
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)

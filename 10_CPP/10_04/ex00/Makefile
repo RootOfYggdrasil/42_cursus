@@ -6,7 +6,7 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/05 17:08:02 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/22 12:56:49 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 #			DEFINITIONS		#
 
-CC	= c++ -std=c++98
+CC	= clang++ -std=c++98
 AR	= ar
 RM	= rm -rf
 

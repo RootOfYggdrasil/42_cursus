@@ -6,26 +6,31 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/04 17:12:42 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/22 12:56:30 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = ClapTrap
+NAME = Animal
 
 #			FLAGS			#
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 #			DEFINITIONS		#
 
-CC	= c++ -std=c++98
+CC	= clang++ -std=c++98
 AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
-SRC	= 	main	\
-		ClapTrap
+SRC	= 	AAnimal	\
+		Cat		\
+		Dog		\
+		WrongAnimal	\
+		WrongCat	\
+		main	\
+		Brain
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)
