@@ -6,7 +6,7 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/27 15:13:24 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/04/17 22:43:25 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,12 @@ AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
-SRC	= 	main
+SRC	= 	main	\
+		Bureaucrat	\
+		AForm	\
+		ShrubberyCreationForm	\
+		RobotomyRequestForm	\
+		PresidentialPardonForm
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)

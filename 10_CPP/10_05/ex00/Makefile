@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/03/27 15:13:24 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/03/27 18:20:21 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = buro
+NAME = Bureaucrat
 
 #			FLAGS			#
 
@@ -24,7 +24,8 @@ AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
-SRC	= 	main
+SRC	= 	main	\
+		Bureaucrat
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)
