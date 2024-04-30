@@ -1,0 +1,3 @@
+[submodule "IRC"]
+	path = IRC
+	url = git@github.com:RootOfYggdrasil/IRC.git
