@@ -6,12 +6,12 @@
 #    By: sdel-gra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/30 18:26:48 by sdel-gra          #+#    #+#              #
-#    Updated: 2024/04/18 13:31:16 by sdel-gra         ###   ########.fr        #
+#    Updated: 2024/05/03 16:17:32 by sdel-gra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME = buro
+NAME = Base
 
 #			FLAGS			#
 
@@ -19,18 +19,13 @@ CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow
 
 #			DEFINITIONS		#
 
-CC	= clang++ -std=c++98
+CC	= c++ -std=c++98
 AR	= ar
 RM	= rm -rf
 
 #			PATH & SOURCES	#
 SRC	= 	main	\
-		Bureaucrat	\
-		AForm	\
-		ShrubberyCreationForm	\
-		RobotomyRequestForm	\
-		PresidentialPardonForm	\
-		Intern
+		Base
 
 SRCFC	= $(addsuffix .cpp, $(SRC))
 SRCO	= $(SRCFC:.cpp=.o)
