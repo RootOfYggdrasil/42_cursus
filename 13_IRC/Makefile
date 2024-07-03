@@ -7,31 +7,32 @@ C = \033[0;96m
 W = \033[1;97m
 
 NAME = ircserv
-CC	= c++ -std=c++98
+CC	= c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -g -Wall -Wextra -Werror -std=c++98
 
 RM = rm -f
 
-SRC_PATH = sources/
+SRC_PATH = sources
 SRC =	main \
-		$(SRC_PATH)/Server
+		$(SRC_PATH)/Channel \
+		$(SRC_PATH)/Client \
+		$(SRC_PATH)/Command \
+		$(SRC_PATH)/Server	\
+		$(SRC_PATH)/Utils
 
 EXTENSION = .cpp
 SRCFC	= $(addsuffix $(EXTENSION), $(SRC))
 
-OBJ = $(SRCFC:.cpp=.o)
-
-$(NAME): $(OBJ)
-	@echo "$(OBJ)"
+$(NAME):  $(SRCFC)
+	@echo "$(SRCFC)"
 	@echo "$(C)Compiling $(NAME) $(DEF_COLOR)"
-	$(CC) $(OBJ) $(CFLAGS) -o $(NAME) -I includes/
+	$(CC) $(SRCFC) $(CPPFLAGS) -o $(NAME) -I includes/
 	@echo "'${G}all${DEF_COLOR}' for mandatory ${NAME} executed successfully!"
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJ)
 	@echo "'${G}clean${DEF_COLOR}' for ${NAME} executed successfully!"
 
 fclean: clean
@@ -41,6 +42,14 @@ fclean: clean
 re: fclean
 	make all
 	@echo "'${G}re${DEF_COLOR}' for ${NAME} executed successfully!"
+
+run: re
+		clear
+		./$(NAME) 6667	password
+
+valgrind: re
+		clear
+		valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME) 6667	password
 
 .PHONY: clean fclean re
 
